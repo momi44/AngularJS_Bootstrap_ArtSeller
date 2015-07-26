@@ -1,0 +1,67 @@
+
+<!DOCTYPE HTML>
+<!-- ===================================================== -->
+<!--                   Momeneh Taban                       -->
+<!-- ===================================================== -->
+
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paint Seller</title>
+        <!-- CSS -->
+        <!-- Bootstrap -->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body ng-app="myApp" ng-controller="mainCtrl">
+        
+        <!-- Navbar Top-->
+        <div class="nav navbar-default navbar-static-top">
+            <div class="container-fluid"> 
+                <div class="navebar-header"> 
+                  <div class="navbar-brand">Paint Seller</div>  
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menu-->
+        <div class="col-sm-3" style="padding-top:20px"> 
+            <ul class="nav nav-pills nav-stacked" >
+                <li role="presentation"  class="{{menus[0].active}}">
+                    <a href="#" ng-click="resetAll(); setView('Home')">Home</a>                                              
+                </li>
+                <li role="presentation" class="{{menus[1].active}}">
+                    <a href="#"  ng-click="resetAll(); setView('Paintings')">Paintings</a>                                    
+                </li>
+                 <li role="presentation" class="{{menus[2].active}}">
+                    <a href="#"  ng-click="resetAll(); setView('Photography')">Photography</a>                                
+                </li>
+                 <li role="presentation" class="{{menus[3].active}}">
+                    <a href="#"  ng-click="resetAll(); setView('Drawings')">Drawings</a>                                        
+                </li>
+            </ul>
+        </div>
+        
+        <!-- main pannel-->
+        <div ng-repeat="menu in menus">
+            <div class="col-sm-9" ng-show="menu.display">
+                <div ng-include src="menu.content"></div>
+            </div> 
+        </div>
+        
+        <!-- ===================================================== -->
+        <!--                            JS                         -->
+        <!-- ===================================================== -->
+        
+        <!-- Angular Dependencies -->
+        <script src="bower_components/angularjs/angular.js"> </script>
+        <!-- Angular Controller -->
+        <script src="scripts/app.js"></script>
+      
+        <!-- JQuary | Bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>

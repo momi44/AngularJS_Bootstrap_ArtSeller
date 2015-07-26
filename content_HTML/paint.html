@@ -1,0 +1,18 @@
+<div class="container" style="width:1000px; padding-top:60px" ng-controller="paintingCtrl">
+    <div class="row">
+        <select>
+            <option>Price (Low-High)</option>
+            <option>Price (High-Low)</option>
+        </select>
+    </div>
+    <div class="row">
+        <h1> Paintings </h1> <br/>
+        <div class="col-md-4" ng-repeat="paint in paintings" ><br/>
+            <img src="{{paint.img}}" height="250px" width="250px"/>
+            <h2> {{paint.name}}</h2>
+            <p>Painter: {{paint.painter}}</p>
+            <p>Price: {{paint.price}}$</p>
+            <button class="btn btn-success paddingTop "> Buy </button>
+        </div>
+     </div>
+</div>

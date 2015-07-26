@@ -1,0 +1,22 @@
+
+  <div class="container" style="width:1000px; padding-top:60px" ng-controller="photoCtrl">
+    <div class="row">
+        <select >
+            <option>Price (Low-High)</option>
+            <option>Price (High-Low)</option>
+        </select>
+    </div>
+    <div class="row">
+        <h1> Photographs </h1>
+        <div class="col-md-4" ng-repeat="photo in photos" ><br/>
+             <img src="{{photo.img}}" height="250px" width="250px"/>
+            <h2></span> {{photo.name}}</h2>
+            <p>Photographer: {{photo.painter}}</p>
+            <p>Price: {{photo.price}}$</p>
+            <button class="btn btn-success paddingTop "> Buy </button>
+        </div>
+    </div>
+</div>
+    
+      
+   
